@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace pzpLab2.utils
 {
@@ -24,7 +21,8 @@ namespace pzpLab2.utils
             float maxGpa = youngests[0].Gpa;
             foreach (Student student in youngests.Skip(1))
             {
-                if (student.Gpa > maxYob)
+                // student.Gpa > maxYob
+                if (student.Gpa > maxGpa)
                 {
                     maxGpa = student.Gpa;
                 }

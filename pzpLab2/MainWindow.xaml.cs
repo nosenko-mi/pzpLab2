@@ -2,20 +2,10 @@
 using pzpLab2.utils;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace pzpLab2
 {
@@ -26,12 +16,12 @@ namespace pzpLab2
     //  •	ReadFileIn(char* fileName) – перегляд записів у вхідному файлі послідовно від першого до останнього.
     //  [2] Відкриття файлу
     //  •	CreateFileOut(char* fileName1, char* fileName2) – обробка даних із вхідного файлу по завданню індивідуального варіанту та виведення результатів у вихідний файл.
-    //  Обробка відкритого файлу, [1] збереження нового за результатом роботи
+    //  Обробка відкритого файлу -> [1] збереження файлу
     //  •	ReadFileOut(char* fileName) – перегляд записів у вихідному файлі послідовно від першого до останнього.
     //  [2] Відкриття файлу
     //  •	Дві функції сортування, які сортують вхідний файл до двом полям (поля вибрати по бажанню).
-    
-    
+
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -53,7 +43,6 @@ namespace pzpLab2
             //students.Add(student1);
             //students.Add(student2);
             //students.Add(student3);
-            
             //_studentList = students.SortByGroupAndGpa();
             //RenderStudents(_studentList);
         }
@@ -248,7 +237,7 @@ namespace pzpLab2
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
-            Regex regex = new Regex("[^0-9]");
+            Regex regex = new Regex("[^,0-9]");
             e.Handled = regex.IsMatch(e.Text);
         }
 
